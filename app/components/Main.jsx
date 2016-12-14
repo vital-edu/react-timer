@@ -4,9 +4,9 @@ import React from 'react';
 function Main (props) {
   return (
     <div>
-      <div>
-        <div>
-          <Navigation/>
+      <Navigation/>
+      <div className="row">
+        <div className="column small-centered medium-6 large-4">
           {props.children}
         </div>
       </div>
