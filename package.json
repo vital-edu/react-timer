@@ -1,9 +1,17 @@
 {
-  "name": "react-boilerplate",
+  "name": "react-timer",
   "version": "1.0.0",
-  "description": "Simple react booilerplate",
+  "description": "Simple timer made with React.JS",
   "main": "index.js",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vital-edu/react-timer.git"
+  },
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vital-edu/react-timer/issues"
+  },
+  "homepage": "https://github.com/vital-edu/react-timer#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

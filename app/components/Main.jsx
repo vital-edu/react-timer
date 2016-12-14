@@ -1,3 +1,4 @@
+import Navigation from './Navigation';
 import React from 'react';
 
 function Main (props) {
@@ -5,6 +6,7 @@ function Main (props) {
     <div>
       <div>
         <div>
+          <Navigation/>
           <h1>Boilerplate App!</h1>
           {props.children}
         </div>
