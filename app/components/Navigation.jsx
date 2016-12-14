@@ -1,4 +1,4 @@
-import {IndexLink, link} from 'react-router';
+import {IndexLink, Link} from 'react-router';
 
 import React from 'react';
 
@@ -11,8 +11,8 @@ export default class Navigation extends React.Component {
             <li className="menu-text">
               Timer App
             </li>
-            <li><a href="#">Timer</a></li>
-            <li><a href="#">Countdown</a></li>
+            <li><IndexLink to="/" activeClassName="active-link">Timer</IndexLink></li>
+            <li><Link to="/countdown" activeClassName="active-link">Countdown</Link></li>
           </ul>
         </div>
         <div className="top-bar-right">

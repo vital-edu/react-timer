@@ -7,7 +7,6 @@ function Main (props) {
       <div>
         <div>
           <Navigation/>
-          <h1>Boilerplate App!</h1>
           {props.children}
         </div>
       </div>
