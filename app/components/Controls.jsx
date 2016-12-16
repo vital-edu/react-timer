@@ -12,13 +12,13 @@ export default class Controls extends React.Component {
   }
 
   render () {
-    let { countdownStatus } = this.props;
+    let { clockStatus } = this.props;
 
     let startStopButton = undefined;
 
-    if (countdownStatus === 'started') {
+    if (clockStatus === 'started') {
       startStopButton = <button className="button secondary" onClick={this.onStatusChange('paused')}>Pause</button>
-    } else if (countdownStatus === 'paused') {
+    } else if (clockStatus === 'paused') {
       startStopButton = <button className="button primary" onClick={this.onStatusChange('started')}>Start</button>
     }
 
@@ -32,6 +32,6 @@ export default class Controls extends React.Component {
 }
 
 Controls.propTypes = {
-  countdownStatus: React.PropTypes.string.isRequired,
+  clockStatus: React.PropTypes.string.isRequired,
   onStatusChange: React.PropTypes.func.isRequired,
 };

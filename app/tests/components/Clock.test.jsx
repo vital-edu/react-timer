@@ -11,7 +11,7 @@ describe('Clock', () => {
   });
 
   describe('render', () => {
-    it('should render clocl to output', () => {
+    it('should render clock to output', () => {
       let clock = TestUtils.renderIntoDocument(<Clock totalSeconds={62}/>);
       let $el = $(ReactDOM.findDOMNode(clock));
       let actualText = $el.find('.clock-text').text();
@@ -22,7 +22,7 @@ describe('Clock', () => {
 
   describe('formatSeconds', () => {
     it('should format seconds', () => {
-      let clock = TestUtils.renderIntoDocument(<Clock/>);
+      let clock = TestUtils.renderIntoDocument(<Clock totalSeconds={0}/>);
       let seconds = 615;
       let expected = '10:15';
       let actual = clock.formatSeconds(seconds);
@@ -31,7 +31,7 @@ describe('Clock', () => {
     });
 
     it('should format seconds when min/sec are less than 10', () => {
-      let clock = TestUtils.renderIntoDocument(<Clock/>);
+      let clock = TestUtils.renderIntoDocument(<Clock totalSeconds={0}/>);
       let seconds = 61;
       let expected = '01:01';
       let actual = clock.formatSeconds(seconds);

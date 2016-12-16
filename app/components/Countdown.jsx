@@ -66,7 +66,7 @@ export default class Countdwon extends React.Component {
     let controlArea = undefined;
 
     if (countdownStatus !== "stopped") {
-      controlArea = <Controls countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
+      controlArea = <Controls clockStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
     } else {
       controlArea = <CountdownForm onSetCountdown={this.handleSetCountdown}/>
     }

@@ -29,10 +29,6 @@ export default class Clock extends React.Component {
   }
 }
 
-Clock.defaultProps = {
-  totalSeconds: 0,
-}
-
 Clock.propTypes = {
-  totalSeconds: React.PropTypes.number,
+  totalSeconds: React.PropTypes.number.isRequired,
 }
