@@ -12,7 +12,8 @@ describe('CountdownForm', () => {
 
   it('should call onSetCountdown if valid seconds entered', () => {
     let spy = expect.createSpy();
-    let countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy}/>);
+    let countdownForm = TestUtils.renderIntoDocument(
+      <CountdownForm onSetCountdown={spy}/>);
     let $el = $(ReactDOM.findDOMNode(countdownForm));
 
     countdownForm.refs.seconds.value = '109';
@@ -23,7 +24,8 @@ describe('CountdownForm', () => {
 
   it('should call onSetCountdown if invalid seconds entered', () => {
     let spy = expect.createSpy();
-    let countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy}/>);
+    let countdownForm = TestUtils.renderIntoDocument(
+      <CountdownForm onSetCountdown={spy}/>);
     let $el = $(ReactDOM.findDOMNode(countdownForm));
 
     countdownForm.refs.seconds.value = '109a';

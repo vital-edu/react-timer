@@ -73,6 +73,7 @@ export default class Countdwon extends React.Component {
 
     return (
       <div>
+        <h1 className="page-title">Countdown App</h1>
         <Clock totalSeconds={count}/>
         {controlArea}
       </div>

@@ -12,7 +12,8 @@ describe('Controls', () => {
 
   describe('render', () => {
     it('should render pause when started', () => {
-      let controls = TestUtils.renderIntoDocument(<Controls countdownStatus="started"/>);
+      let controls = TestUtils.renderIntoDocument(
+        <Controls countdownStatus="started" onStatusChange={function (){}}/>);
 
       let $el = $(ReactDOM.findDOMNode(controls));
       let $pauseButton = $el.find('button:contains(Pause)');
@@ -21,7 +22,8 @@ describe('Controls', () => {
     });
 
     it('should render start when paused', () => {
-      let controls = TestUtils.renderIntoDocument(<Controls countdownStatus="paused"/>);
+      let controls = TestUtils.renderIntoDocument(
+        <Controls countdownStatus="paused" onStatusChange={function (){}}/>);
 
       let $el = $(ReactDOM.findDOMNode(controls));
       let $pauseButton = $el.find('button:contains(Start)');
