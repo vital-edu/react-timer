@@ -17,7 +17,7 @@ export default class Clock extends React.Component {
   }
 
   render () {
-    let{totalSeconds} = this.props;
+    let {totalSeconds} = this.props;
 
     return (
       <div className="clock">

@@ -30,12 +30,22 @@ export default class Countdwon extends React.Component {
     }
   }
 
+  componentWillUnmount () {
+    clearInterval(this.timer);
+  }
+
   startTime () {
     this.timer = setInterval(() => {
       let newCount = this.state.count - 1;
       this.setState({
         count: newCount > 0 ? newCount : 0
       });
+
+      if (newCount === 0) {
+        this.setState({
+          countdownStatus: 'stopped',
+        })
+      }
     }, 1000);
   }
 
