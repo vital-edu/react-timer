@@ -24,7 +24,7 @@ export default class Controls extends React.Component {
 
     return (
       <div className="controls">
-      { startStopButton }
+        { startStopButton }
         <button className="button alert hollow" onClick={this.onStatusChange('stopped')}>Clear</button>
       </div>
     );
